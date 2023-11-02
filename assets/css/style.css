@@ -5,5 +5,18 @@
 }
 header{
     display: flex;
+    justify-content: center;
+    justify-content: space-between;
     background-color: maroon;
+    font-family: 'Montserrat', sans-serif;
+}
+.nav-button{
+    list-style: none;
+    background-color: gold;
+    text-align: center;
+    border-width: 5px;
+    padding: 10px;
+    display: inline;
+    align-items: center;
+    color: maroon;
 }
