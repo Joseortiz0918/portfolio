@@ -24,18 +24,14 @@ header h1{
 }
 header nav ul{
     flex-direction: row;
-    max-height: 200px;
+    max-height: 100px;
+    display: flex;
+    background-color: var(--c-secondary);
+    align-items: flex-end;
 }
-.hero{
-    max-height: 20%;
+nav{
+    background-color: var(--c-secondary);
 }
-.title-bar{
-    list-style: none;
-    margin: 100px 20px 100px 20px;
-    border-color: var(--c-secondary);
-    border-width: 5px;
-}
-
 .nav-button{
     list-style: none;
     text-align: center;
@@ -43,14 +39,82 @@ header nav ul{
     border-width: 5px;
     padding: 10px;
     display: flex;
-    margin: 1rem;
     flex-wrap: wrap;
     align-items: flex-end;
-    }
+}
+.hero{
+    max-height: 300px;
+    max-width:max-content
+}
 .main-body{
     display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 25% 25% 25% 25%;
+    margin: 20px;
+    color: var(--c-secondary);
+    
+}
+p{
+    color: var(--c-secondary);
+}
 
+.about-me-side{
+    grid-column-start: 1;
+    grid-row-start: 1;
+    border-right: solid 10px;
+    color: var(--c-secondary);
+    
+    
+}
+.work-side{
+    grid-column-start: 1;
+    grid-row-start: 2;
+    border-right: solid 10px;
+    color: var(--c-secondary);
+    
+}
+.contact-me-side{
+    grid-column-start: 1;
+    grid-row-start: 3;
+    border-right: solid 10px;
+    color: var(--c-secondary);
+   
+}
+.resume-side{
+    grid-column-start: 1;
+    grid-row-start: 4;
+    border-right: solid 10px;
+    color: var(--c-secondary);
+   
+   
+}
+    
 
+.about-me{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    padding: 1rem;
+    
+    
+}
+.work{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    padding: 1rem;
+    
+    
+}
+.contact-me{
+    grid-column-start: 2;
+    grid-row-start: 3;
+    padding: 1rem;
+   
+}
+.resume{
+    grid-column-start: 2;
+    grid-row-start: 4;
+    padding: 1rem;
+        
 }
 
 
