@@ -46,6 +46,28 @@ nav{
     max-height: 300px;
     max-width:max-content
 }
+.project-box-grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 33% 33%;
+
+}
+.main-project-box{
+    width: 600px;
+    border: 15px solid var(--c-primary);
+    padding: 50px;
+    margin: 20px;
+    grid-column-start: span 2;
+    grid-row-start: 1;
+    
+    
+}
+.project-box{
+    width: 300px;
+    border: 15px solid var(--c-primary);
+    padding: 50px;
+    margin: 20px;
+}
 .main-body{
     display: grid;
     grid-template-columns: 20% 80%;
@@ -116,5 +138,11 @@ p{
     padding: 1rem;
         
 }
-
+footer ul li{
+    list-style: none;
+    text-align: center;
+    
+    display: inline;
+    
+}
 
