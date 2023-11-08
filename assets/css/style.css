@@ -7,6 +7,10 @@
     color: var(--c-primary);
     font-family:Arial, Helvetica, sans-serif;
     background-color:var(--c-background);
+
+}
+body{
+    margin: 0;
 }
 header{
     display: flex;
@@ -23,11 +27,10 @@ header h1{
 
 }
 header nav ul{
-    flex-direction: row;
-    max-height: 100px;
     display: flex;
+    position: relative;
+    right: 120px;
     background-color: var(--c-secondary);
-    align-items: flex-end;
 }
 nav{
     background-color: var(--c-secondary);
@@ -36,11 +39,9 @@ nav{
     list-style: none;
     text-align: center;
     background-color: var(--c-secondary);
-    border-width: 5px;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
+    padding: 3px;
+    margin: 5px;
+    text-decoration: underline 3px;
 }
 .hero{
     max-height: 300px;
@@ -80,7 +81,7 @@ p{
     color: var(--c-secondary);
 }
 
-.about-me-side{
+#about-me-side{
     grid-column-start: 1;
     grid-row-start: 1;
     border-right: solid 10px;
@@ -88,21 +89,21 @@ p{
     
     
 }
-.work-side{
+#work-side{
     grid-column-start: 1;
     grid-row-start: 2;
     border-right: solid 10px;
     color: var(--c-secondary);
     
 }
-.contact-me-side{
+#contact-me-side{
     grid-column-start: 1;
     grid-row-start: 3;
     border-right: solid 10px;
     color: var(--c-secondary);
    
 }
-.resume-side{
+#resume-side{
     grid-column-start: 1;
     grid-row-start: 4;
     border-right: solid 10px;
@@ -110,8 +111,6 @@ p{
    
    
 }
-    
-
 .about-me{
     grid-column-start: 2;
     grid-row-start: 1;
@@ -145,4 +144,9 @@ footer ul li{
     display: inline;
     
 }
+li:hover{
+    background-color: var(--c-primary);
+    color:var(--c-secondary)
+}
 
+ 
