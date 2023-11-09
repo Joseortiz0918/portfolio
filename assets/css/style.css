@@ -1,14 +1,20 @@
 :root{
     --c-primary:#92CCCD;
     --c-secondary:#31343D;
-    --c-background:#EDEDF6;
+    --c-background: #EDEDF6;
+    
 }
 *{
     color: var(--c-primary);
     font-family:Arial, Helvetica, sans-serif;
     background-color:var(--c-background);
-
+    
 }
+a:link{
+    color: var(--c-secondary);
+    background-color: var(--c-primary);
+}
+
 body{
     margin: 0;
 }
@@ -18,23 +24,33 @@ header{
     background-color: var(--c-secondary);
     font-family: 'Montserrat', sans-serif;
     max-height: 100px;
-}
+}    
 header h1{
     text-align: center;
     display: flex;
     justify-content: end;
-    background-color: var(--c-secondary);
+    background-color: var(--c-primary);
+    color: var(--c-secondary); 
+    padding: 10px;
+   
 
 }
 header nav ul{
     display: flex;
     position: relative;
     right: 120px;
+    top: 20px;
+    background-color: var(--c-secondary);
+    list-style: none;
+
+}
+nav ul li{
     background-color: var(--c-secondary);
 }
 nav{
     background-color: var(--c-secondary);
 }
+
 .nav-button{
     list-style: none;
     text-align: center;
@@ -44,8 +60,23 @@ nav{
     text-decoration: underline 3px;
 }
 .hero{
-    max-height: 300px;
-    max-width:max-content
+    height: 200px;
+    width: 100%;
+
+}
+.main-body{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto;
+    margin: 20px;
+    color: var(--c-secondary);
+    
+}
+h2{
+    font-size: 250%;
+    display: flex;
+    justify-content: end;
+    
 }
 .project-box-grid{
     display: grid;
@@ -54,28 +85,31 @@ nav{
 
 }
 .main-project-box{
-    width: 600px;
-    border: 15px solid var(--c-primary);
-    padding: 50px;
-    margin: 20px;
+    border: 1rem solid var(--c-primary);
+    margin: 10px;
     grid-column-start: span 2;
     grid-row-start: 1;
-    
-    
+    overflow: hidden;
+    position: static;
+}
+.main-project-box:hover{
+    opacity: 0.5;
+}
+.project-cards{
+    position:absolute;
+    top:800px;
+    color: var(--c-secondary);
+    background-color: var(--c-primary);
+    font-size: 300%;
+
 }
 .project-box{
-    width: 300px;
-    border: 15px solid var(--c-primary);
-    padding: 50px;
-    margin: 20px;
+    border: 1rem solid var(--c-primary);
+    margin: 10px;
+    overflow: hidden;
 }
-.main-body{
-    display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 25% 25% 25% 25%;
-    margin: 20px;
-    color: var(--c-secondary);
-    
+.project-box:hover{
+    opacity: 0.5;
 }
 p{
     color: var(--c-secondary);
@@ -103,14 +137,8 @@ p{
     color: var(--c-secondary);
    
 }
-#resume-side{
-    grid-column-start: 1;
-    grid-row-start: 4;
-    border-right: solid 10px;
-    color: var(--c-secondary);
-   
-   
-}
+
+
 .about-me{
     grid-column-start: 2;
     grid-row-start: 1;
@@ -122,6 +150,7 @@ p{
     grid-column-start: 2;
     grid-row-start: 2;
     padding: 1rem;
+    overflow: auto;
     
     
 }
@@ -129,24 +158,33 @@ p{
     grid-column-start: 2;
     grid-row-start: 3;
     padding: 1rem;
-   
 }
-.resume{
-    grid-column-start: 2;
-    grid-row-start: 4;
-    padding: 1rem;
-        
-}
-footer ul li{
+.contact-me ul{
     list-style: none;
-    text-align: center;
-    
-    display: inline;
-    
+    display: inline-flex;
+    width: 500px;
+    justify-content: space-around;
+
+
 }
-li:hover{
+a:hover{
     background-color: var(--c-primary);
     color:var(--c-secondary)
 }
-
- 
+.ending{
+    height: 200px;
+}
+@media screen and (max-width:960px){
+    div.main-body{
+        display: grid;
+        grid-template-rows: 5% 10% 5% 70% 5% 5% 
+    
+    }
+}
+@media screen and (max-width:320px){
+    .main-project-box{
+        border: 1rem solid var(--c-primary);
+        margin: 10px;
+        overflow: hidden;
+    }
+}
